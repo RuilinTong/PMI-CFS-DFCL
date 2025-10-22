@@ -5,7 +5,7 @@
 </p>
 
 [![Paper](https://img.shields.io/badge/NeurIPS-Paper-blue)](https://neurips.cc/virtual/2025/poster/115103)
-[![License](https://img.shields.io/github/license/RuilinTong/PMI-CFS-DFCL)](https://github.com/RuilinTong/PMI-CFS-DFCL/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/RuilinTong/PMI-CFS-DFCL?cacheSeconds=60)](https://github.com/RuilinTong/PMI-CFS-DFCL/blob/main/LICENSE)
 ![NeurIPS 2025](https://img.shields.io/badge/NeurIPS-2025-blue)
 
 ## Abstract <a id="abstract"></a>
