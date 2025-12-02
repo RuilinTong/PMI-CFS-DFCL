@@ -1,0 +1,105 @@
+prefix:  ""   
+dataset:  "cifar224"   
+n_classes: 100
+memory_size: 100
+memory_per_class : 5
+fixed_memory : false  
+shuffle : true  
+init_cls : 10  
+increment : 10  
+model_name :  'moe_adapter_openset'
+backbone_type: 'ViT-B-16'
+# pretrained_weight: 'laion400m_e32'
+# pretrained_weight: 'laion2b_s34b_b88k'
+pretrained_weight: 'openai'
+device : [ 0 ]  
+seed : [1993]
+prompt_template: "a bad photo of a {}."
+save_ckpt: 1  # default 0
+ckpt: -1  # default -1
+
+batch_size: 64
+tuned_epoch : 3
+init_lr : 0.001
+weight_decay : 0.0
+# min_lr : 0.00001
+optimizer :  'sgd' 
+# optimizer :  'adam'
+scheduler :  'cosine'
+
+n_ctx_vision: 0
+prompt_depth_vision: 0
+
+input_aug: 0  # default 0
+data_stat: 1  # default 0
+mem_repeat: 1
+img_size: '3,32,32'
+inv_lr: 0.1
+train_steps: 200
+alpha_pr: 0.005
+alpha_rf: 0.002
+size_change: ''
+layer_size_change: '300,600,900,1200'
+l_pr: 0.0
+l_aug: 0.0
+l_lr: 0.1
+tune_steps: 600
+tune_lr: 0.1
+return_best: 0
+search_params: 0
+milestones: '2000,3000'
+gen_batch_size: 20
+layer_batch: 40
+feat_norm: 0
+rf_factor: 1.0  # default 1.0
+stat_type: 'gaussian'
+components: 5
+start_block: 1  # default 0, only [0, 1] is valid
+
+hkd_loss: 'l1'  # default l1
+tkd_loss: 'l1'  # default l2
+lambda_hkd: 0.1
+lambda_tkd: 0.2  # default 0.0
+lambda_ft: 0.001  # default 0.0
+ft_balance: 0  # default 0
+lambda_lkd: 0.0  # default 0
+lambda_ce: 1.0  # default 1.0
+change_factor: 1  # default 0
+label_smoothing: 0.0
+prv_ft: 0  # default 0
+stat_mom: 0.0  # default 0, float between [0, 1]
+
+finetune_epoch: 0  # default 0
+finetune_lr: 0.01
+
+cont_blocks: 2
+cont_lr: 0.01
+cont_epoch: 200
+cont_step: 5  # default 5
+
+feat_type: 'cont'  # default rand
+cont_slt_rate: 0.5
+boost_rate: 20  # default 1
+
+open_feat_type: 'rand'  # default 'rand'
+open_rf: 0.02  # default 0.002
+open_pr: 0.0  # default 0.005
+open_loss_type: 'mse'  # default l2
+openset_per_class: 20  # default 20
+shift_factor: 0.1  # default 0.0
+proto_shift: 0.0  # default 0.0
+text_aug_mode: 'proto_map'  # default ''
+
+open_lr: 0.0005  # default 0.001
+openset_ce: 1.0  # default 1.0
+openset_hkd: 0.0  # default 0.1
+openset_tkd: 0.0  # default 0.1
+openset_ft: 0.001  # default 0.0
+openset_epoch: 1  # default 0
+open_feat_mode: 'proto_map'  # default gaussian
+map_mode: 'txt_txt'  # default txt_txt
+
+open_slt_step: 10  # default 10
+open_slt_batch: 40  # default 20
+open_slt_rate: 0.25  # default 0.5
+proto_class: 5  # default 1
