@@ -21,3 +21,15 @@ Continual learning (CL) aims to adapt a model to a sequence of tasks while maint
 - Continual learning implementations on CLIP (Table 2 in the paper) is shown in 'CLIP' repository.
 
 **Note:** Some experiments in this project are sensitive to random seeds, which may lead to variations in the results. We recommend running the experiments with multiple seeds to obtain reliable average performance. You can specify the seed using the `--seed` argument in the script.
+
+## Citation
+
+If you find our work helpful, please cite our paper by the following reference:
+
+```
+@inproceedings{tong2025pmi_cfs,
+  title={Model Inversion with Layer-Specific Modeling and Alignment for Data-Free Continual Learning},
+  author={Tong, Ruilin and Lu, Haodong and Liu, Yuhang and Gong, Dong},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+}
+```
